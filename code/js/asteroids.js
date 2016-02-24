@@ -28,7 +28,7 @@ var punts = 0;
 // Variable per comptar les vides que ens queden
 var vides = 3;
 
-// Variables per mostrar informació 
+// Variables per mostrar informació
 var textPunts, textVides;
 
 // Variables pels controls tàctils
@@ -172,7 +172,7 @@ function ferCreate() {
     asteroides.setAll('anchor.y', 0.5);
 
     /* Step_7 */
-    // Crea conjunt d'explosions		
+    // Crea conjunt d'explosions
     explosions = game.add.group();
     explosions.createMultiple(12, 'explosio');
     explosions.setAll('anchor.x', 0.5);
@@ -267,9 +267,9 @@ function ferUpdate() {
     }, null, this);
 
 
-    
+
     /* Step_8 */
-    //  Revisa les colisions entre la nau i el grup d'asteroides		
+    //  Revisa les colisions entre la nau i el grup d'asteroides
     game.physics.arcade.overlap(nau, asteroides, function (nau, asteroide) {
         // Fa desapareixer l'asteroide
         asteroide.kill();
@@ -320,7 +320,7 @@ function ferUpdate() {
             if (distancia > 10) {
                 nau.rotation = angRad;
                 game.physics.arcade.velocityFromAngle(angDeg, distancia * 2, nau.body.velocity);
-            } 
+            }
         } else {
             nau.body.acceleration.set(0);
             nau.body.angularAcceleration = 0;
